@@ -84,6 +84,34 @@ body {
   font-weight: bold;
 }
 
+.flashcard-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.flashcard-nav button {
+  flex: 1 1 150px;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.flashcard-nav button:hover {
+  background-color: var(--accent-yellow);
+  color: var(--dark-gray);
+  transform: translateY(-2px);
+}
+
+
 /* ================================
    Responsive Design for Mobile
 ================================== */
@@ -94,5 +122,16 @@ body {
 
   .hero p {
     font-size: 1rem;                      /* Adjusted paragraph size */
+  }
+}
+
+@media (max-width: 600px) {
+  .flashcard-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flashcard-nav button {
+    width: 100%;
   }
 }
